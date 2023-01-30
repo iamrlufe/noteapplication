@@ -1,7 +1,7 @@
-#Библиотеки
+# Библиотеки
 
 import sys
-from PyQt5.QtCore import Qt
+# from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QApplication, QMainWindow, QListWidget, QLineEdit, QPushButton
 
 
@@ -25,9 +25,9 @@ class ToDoApp(QMainWindow):
         # Create a button to add the new to-do item
         self.add_button = QPushButton('Add', self)
         self.add_button.setGeometry(230, 230, 60, 30)
-        self.add_button.clicked.connect(self.addToDo)
+        self.add_button.clicked.connect(self.addtodo)
 
-    def addToDo(self):
+    def addtodo(self):
         # Get the text from the line edit
         todo_text = self.line_edit.text()
         # Add the text to the list widget
@@ -35,10 +35,9 @@ class ToDoApp(QMainWindow):
         # Clear the line edit
         self.line_edit.clear()
 
+
 if __name__ == '__main__':
     app = QApplication(sys.argv)
     todo = ToDoApp()
     todo.show()
     sys.exit(app.exec_())
-
-
