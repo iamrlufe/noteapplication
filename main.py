@@ -27,6 +27,10 @@ class ToDoApp(QMainWindow):
         self.add_button.setGeometry(230, 230, 60, 30)
         self.add_button.clicked.connect(self.addtodo)
 
+        # Добавлем кнопку для открытия фалов
+        self.add_button_to_open = QPushButton('Открыть', self)
+
+
     def addtodo(self):
         # Get the text from the line edit
         todo_text = self.line_edit.text()
