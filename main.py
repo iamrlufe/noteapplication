@@ -12,7 +12,7 @@ class ToDoApp(QMainWindow):
 
     def initUI(self):
         self.setWindowTitle('To-Do App')
-        self.setGeometry(300, 300, 300, 300)
+        self.setGeometry(600, 600, 600, 600)
 
         # Create a list widget to display the to-do items
         self.list_widget = QListWidget(self)
@@ -27,9 +27,11 @@ class ToDoApp(QMainWindow):
         self.add_button.setGeometry(230, 230, 60, 30)
         self.add_button.clicked.connect(self.addtodo)
 
-        # Добавлем кнопку для открытия фалов
+        # Добавлем кнопку для открытия файлов
         self.add_button_to_open = QPushButton('Открыть', self)
-
+        self.add_button_to_open.setToolTip('Так это <b>QWidget</b> для этой кнопки')
+        self.add_button_to_open.setGeometry(80,80,80,80)
+        self.add_button_to_open.clicked.connect()
 
     def addtodo(self):
         # Get the text from the line edit
